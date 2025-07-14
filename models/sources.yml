@@ -1,0 +1,19 @@
+# olist_ecommerce_analysis/models/sources.yml
+
+version: 2
+
+sources:
+  - name: olist_raw # This is the alias use in dbt (e.g., {{ source('olist_raw', 'orders') }})
+    database: portfolio-project-465909 
+    schema: olist_raw # The BigQuery dataset where the raw Olist tables are loaded
+    tables:
+      - name: orders # This maps to BigQuery table 'olist_raw.orders'
+        description: Raw orders data from Olist.
+      - name: order_items
+        description: Raw order items data from Olist.
+      - name: products
+        description: Raw products data from Olist.
+      - name: customers
+        description: Raw customers data from Olist.
+      - name: product_category_name_translation
+        description: Translation of product category names from Portuguese to English.

@@ -1,0 +1,19 @@
+# dbt artifacts
+target/             # Compiled SQL, run logs, manifests - generated files
+dbt_packages/       # Downloaded dbt packages (if you use them)
+logs/               # dbt logs from runs
+
+# Python virtual environment
+venv_dbt_olist/     # Your virtual environment folder
+.venv/              # Common alternative name for venv folder
+__pycache__/        # Python compiled bytecode cache
+
+# Environment variables or sensitive files (CRUCIAL FOR SECURITY)
+.env                # Common file for environment variables
+*.json              # DO NOT COMMIT JSON KEY FILES
+*.pem               # DO NOT COMMIT PEM KEY FILES
+*.pkcs8             # DO NOT COMMIT PKCS8 KEY FILES
+
+
+metabase.db.mv.db
+metabase.db.trace.db

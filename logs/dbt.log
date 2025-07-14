@@ -1,0 +1,1448 @@
+[0m13:05:22.685265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1422C7150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1422F7C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D1422F5F50>]}
+
+
+============================== 13:05:22.694136 | 2e9b2e04-7cd8-47b0-821a-270587ea43da ==============================
+[0m13:05:22.694136 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:05:22.694136 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m13:05:22.705156 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:05:22.705156 [info ] [MainThread]: python version: 3.11.3
+[0m13:05:22.720012 [info ] [MainThread]: python path: D:\Analytics_Engineer_project\venv_dbt_olist\Scripts\python.exe
+[0m13:05:22.721040 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:05:26.020462 [info ] [MainThread]: Using profiles dir at C:\Users\ulric\.dbt
+[0m13:05:26.022468 [info ] [MainThread]: Using profiles.yml file at C:\Users\ulric\.dbt\profiles.yml
+[0m13:05:26.022468 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics_Engineer_project\olist_ecommerce_analysis\dbt_project.yml
+[0m13:05:26.024473 [info ] [MainThread]: adapter type: bigquery
+[0m13:05:26.024473 [info ] [MainThread]: adapter version: 1.10.0
+[0m13:05:26.131602 [info ] [MainThread]: Configuration:
+[0m13:05:26.132517 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:05:26.133514 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:05:26.133514 [info ] [MainThread]: Required dependencies:
+[0m13:05:26.134514 [debug] [MainThread]: Executing "git --help"
+[0m13:05:26.195203 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:05:26.195203 [debug] [MainThread]: STDERR: "b''"
+[0m13:05:26.195203 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:05:26.195203 [info ] [MainThread]: Connection:
+[0m13:05:26.195203 [info ] [MainThread]:   method: service-account
+[0m13:05:26.195203 [info ] [MainThread]:   database: portfolio-project-465909
+[0m13:05:26.206919 [info ] [MainThread]:   execution_project: portfolio-project-465909
+[0m13:05:26.206919 [info ] [MainThread]:   schema: olist_marts
+[0m13:05:26.207927 [info ] [MainThread]:   location: US
+[0m13:05:26.207927 [info ] [MainThread]:   priority: interactive
+[0m13:05:26.207927 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:05:26.207927 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:05:26.207927 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:05:26.207927 [info ] [MainThread]:   job_retries: 1
+[0m13:05:26.207927 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:05:26.207927 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:05:26.207927 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:05:26.207927 [info ] [MainThread]:   client_id: None
+[0m13:05:26.207927 [info ] [MainThread]:   token_uri: None
+[0m13:05:26.207927 [info ] [MainThread]:   compute_region: None
+[0m13:05:26.207927 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:05:26.207927 [info ] [MainThread]:   gcs_bucket: None
+[0m13:05:26.207927 [info ] [MainThread]:   dataproc_batch: None
+[0m13:05:26.207927 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:05:26.980246 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:05:26.980246 [debug] [MainThread]: On debug: select 1 as id
+[0m13:05:26.980246 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:05:26.996802 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"B:\\.dbt_keys\\portfolio-project-465909-65429b2584e5.json"''
+[0m13:05:26.997802 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m13:05:26.997802 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"B:\\.dbt_keys\\portfolio-project-465909-65429b2584e5.json"'
+[0m13:05:26.998867 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m13:05:26.999802 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:05:26.999802 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:05:27.001804 [debug] [MainThread]: Command `dbt debug` failed at 13:05:27.001804 after 4.41 seconds
+[0m13:05:27.002803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D142290610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D142292890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D15ED31E10>]}
+[0m13:05:27.002803 [debug] [MainThread]: Flushing usage events
+[0m13:05:27.385877 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:10:48.538838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E75F5DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E75F6ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E75F7AD0>]}
+
+
+============================== 13:10:48.555102 | 63408a79-7d78-498e-8fa3-692f2159be49 ==============================
+[0m13:10:48.555102 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:10:48.555102 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:10:48.589235 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:10:48.589235 [info ] [MainThread]: python version: 3.11.3
+[0m13:10:48.589235 [info ] [MainThread]: python path: D:\Analytics_Engineer_project\venv_dbt_olist\Scripts\python.exe
+[0m13:10:48.589235 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:10:53.283679 [info ] [MainThread]: Using profiles dir at C:\Users\ulric\.dbt
+[0m13:10:53.288461 [info ] [MainThread]: Using profiles.yml file at C:\Users\ulric\.dbt\profiles.yml
+[0m13:10:53.288461 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics_Engineer_project\olist_ecommerce_analysis\dbt_project.yml
+[0m13:10:53.288461 [info ] [MainThread]: adapter type: bigquery
+[0m13:10:53.288461 [info ] [MainThread]: adapter version: 1.10.0
+[0m13:10:53.427955 [info ] [MainThread]: Configuration:
+[0m13:10:53.427955 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:10:53.427955 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:10:53.427955 [info ] [MainThread]: Required dependencies:
+[0m13:10:53.444314 [debug] [MainThread]: Executing "git --help"
+[0m13:10:53.545228 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:10:53.546238 [debug] [MainThread]: STDERR: "b''"
+[0m13:10:53.546238 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:10:53.549587 [info ] [MainThread]: Connection:
+[0m13:10:53.549587 [info ] [MainThread]:   method: service-account
+[0m13:10:53.549587 [info ] [MainThread]:   database: portfolio-project-465909
+[0m13:10:53.549587 [info ] [MainThread]:   execution_project: portfolio-project-465909
+[0m13:10:53.549587 [info ] [MainThread]:   schema: olist_marts
+[0m13:10:53.549587 [info ] [MainThread]:   location: US
+[0m13:10:53.549587 [info ] [MainThread]:   priority: interactive
+[0m13:10:53.549587 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:10:53.549587 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:10:53.549587 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:10:53.549587 [info ] [MainThread]:   job_retries: 1
+[0m13:10:53.549587 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:10:53.549587 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:10:53.549587 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:10:53.561963 [info ] [MainThread]:   client_id: None
+[0m13:10:53.563282 [info ] [MainThread]:   token_uri: None
+[0m13:10:53.564292 [info ] [MainThread]:   compute_region: None
+[0m13:10:53.564678 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:10:53.565748 [info ] [MainThread]:   gcs_bucket: None
+[0m13:10:53.566843 [info ] [MainThread]:   dataproc_batch: None
+[0m13:10:53.568812 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:10:54.360427 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:10:54.376320 [debug] [MainThread]: On debug: select 1 as id
+[0m13:10:54.376320 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:10:54.376320 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"B:\\\\.dbt_keys\\\\portfolio-project-465909-65429b2584e5.json"''
+[0m13:10:54.376320 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m13:10:54.376320 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"B:\\\\.dbt_keys\\\\portfolio-project-465909-65429b2584e5.json"'
+[0m13:10:54.376320 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m13:10:54.376320 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:10:54.376320 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:10:54.376320 [debug] [MainThread]: Command `dbt debug` failed at 13:10:54.376320 after 5.95 seconds
+[0m13:10:54.376320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E7347CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E75A0E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1E0BF1890>]}
+[0m13:10:54.376320 [debug] [MainThread]: Flushing usage events
+[0m13:10:54.911577 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:13:10.249301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDDE4F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDDE7610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDDE7590>]}
+
+
+============================== 13:13:10.254225 | 4f45bd0d-6409-437c-a3e6-d5940c4a57f4 ==============================
+[0m13:13:10.254225 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:13:10.256232 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:13:10.274238 [info ] [MainThread]: dbt version: 1.10.4
+[0m13:13:10.275238 [info ] [MainThread]: python version: 3.11.3
+[0m13:13:10.276249 [info ] [MainThread]: python path: D:\Analytics_Engineer_project\venv_dbt_olist\Scripts\python.exe
+[0m13:13:10.277248 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:13:13.491230 [info ] [MainThread]: Using profiles dir at C:\Users\ulric\.dbt
+[0m13:13:13.491230 [info ] [MainThread]: Using profiles.yml file at C:\Users\ulric\.dbt\profiles.yml
+[0m13:13:13.491230 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics_Engineer_project\olist_ecommerce_analysis\dbt_project.yml
+[0m13:13:13.491230 [info ] [MainThread]: adapter type: bigquery
+[0m13:13:13.491230 [info ] [MainThread]: adapter version: 1.10.0
+[0m13:13:13.643902 [info ] [MainThread]: Configuration:
+[0m13:13:13.643902 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:13:13.643902 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:13:13.643902 [info ] [MainThread]: Required dependencies:
+[0m13:13:13.643902 [debug] [MainThread]: Executing "git --help"
+[0m13:13:13.728336 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:13:13.729347 [debug] [MainThread]: STDERR: "b''"
+[0m13:13:13.730346 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:13:13.732345 [info ] [MainThread]: Connection:
+[0m13:13:13.733344 [info ] [MainThread]:   method: service-account
+[0m13:13:13.734345 [info ] [MainThread]:   database: portfolio-project-465909
+[0m13:13:13.735344 [info ] [MainThread]:   execution_project: portfolio-project-465909
+[0m13:13:13.736343 [info ] [MainThread]:   schema: olist_marts
+[0m13:13:13.737348 [info ] [MainThread]:   location: US
+[0m13:13:13.738353 [info ] [MainThread]:   priority: interactive
+[0m13:13:13.739349 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:13:13.740351 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:13:13.740351 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:13:13.741351 [info ] [MainThread]:   job_retries: 1
+[0m13:13:13.742351 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:13:13.743349 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:13:13.744355 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:13:13.745349 [info ] [MainThread]:   client_id: None
+[0m13:13:13.746349 [info ] [MainThread]:   token_uri: None
+[0m13:13:13.747349 [info ] [MainThread]:   compute_region: None
+[0m13:13:13.748075 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:13:13.748075 [info ] [MainThread]:   gcs_bucket: None
+[0m13:13:13.751720 [info ] [MainThread]:   dataproc_batch: None
+[0m13:13:13.751720 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:13:14.546550 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:13:14.546550 [debug] [MainThread]: On debug: select 1 as id
+[0m13:13:14.546550 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:13:15.692537 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:8ecfe565-740c-448e-9a40-8750fdf465b9&page=queryresults
+[0m13:13:18.516656 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:13:18.516656 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:13:18.516656 [debug] [MainThread]: Command `dbt debug` succeeded at 13:13:18.516656 after 8.36 seconds
+[0m13:13:18.516656 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:13:18.516656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDDF0B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDE50B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDE53B90>]}
+[0m13:13:18.516656 [debug] [MainThread]: Flushing usage events
+[0m13:13:18.896534 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:25:22.956186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DEFDAF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DEFDAD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DEFDB5D0>]}
+
+
+============================== 13:25:22.961272 | 97956887-459b-4b8f-8ac8-3719eaaebdda ==============================
+[0m13:25:22.961272 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:25:22.961272 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'd:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:25:23.192180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97956887-459b-4b8f-8ac8-3719eaaebdda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E014A150>]}
+[0m13:25:23.231454 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:25:23.235931 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:25:23.238309 [debug] [MainThread]: Command `cli deps` succeeded at 13:25:23.238309 after 0.41 seconds
+[0m13:25:23.238309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DED87A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DF0371D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DF037090>]}
+[0m13:25:23.238309 [debug] [MainThread]: Flushing usage events
+[0m13:25:23.628530 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:40:20.745874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7EF7550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7EF7410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7E8FAD0>]}
+
+
+============================== 13:40:20.753829 | 9244e60b-0d71-4ccd-b7e4-4b0cadea29c6 ==============================
+[0m13:40:20.753829 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:40:20.755204 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:40:25.728024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7EA2B90>]}
+[0m13:40:25.807405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE493C250>]}
+[0m13:40:25.807405 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:40:27.115706 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m13:40:27.461776 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:40:27.461776 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:40:27.466800 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m13:40:27.510617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF85098DD0>]}
+[0m13:40:27.648334 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:40:27.656347 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:40:27.700964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF84C56550>]}
+[0m13:40:27.700964 [info ] [MainThread]: Found 1 model, 5 sources, 493 macros
+[0m13:40:27.710569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF8522BC50>]}
+[0m13:40:27.710569 [info ] [MainThread]: 
+[0m13:40:27.710569 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:40:27.710569 [info ] [MainThread]: 
+[0m13:40:27.716188 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:40:27.719328 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m13:40:27.719973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:40:28.193563 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m13:40:28.193563 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:40:28.546255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF84D41990>]}
+[0m13:40:28.547173 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:40:28.564512 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:40:28.565509 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_orders ............................. [RUN]
+[0m13:40:28.565509 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_orders'
+[0m13:40:28.566979 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:40:28.579410 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_orders"
+[0m13:40:28.585412 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:40:28.625218 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_orders"
+[0m13:40:28.631070 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_orders: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_orders"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_orders`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_orders.sql
+
+
+
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    -- Casting timestamp columns from string to TIMESTAMP type for proper date/time operations in BigQuery
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', order_purchase_timestamp) AS order_purchased_at,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', order_approved_at) AS order_approved_at,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', order_delivered_carrier_date) AS order_delivered_carrier_at,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', order_delivered_customer_date) AS order_delivered_customer_at,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', order_estimated_delivery_date) AS order_estimated_delivery_at
+FROM
+    `portfolio-project-465909`.`olist_raw`.`orders` -- This references the 'orders' table from the 'olist_raw' source defined in sources.yml
+WHERE
+    order_id IS NOT NULL -- Basic data quality check: ensure essential IDs exist
+    AND order_purchase_timestamp IS NOT NULL -- Ensure we have a timestamp for the order;
+
+
+[0m13:40:28.632070 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:40:29.272922 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:9d82e699-a0e7-4a51-b36a-14de95db3409&page=queryresults
+[0m13:40:29.511767 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:9d82e699-a0e7-4a51-b36a-14de95db3409&page=queryresults
+[0m13:40:29.529324 [debug] [Thread-1 (]: Database Error in model stg_olist_orders (models\staging\stg_olist_orders.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_orders.sql
+[0m13:40:29.535821 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9244e60b-0d71-4ccd-b7e4-4b0cadea29c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE76A6310>]}
+[0m13:40:29.536820 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model olist_marts.stg_orders .................... [[31mERROR[0m in 0.97s]
+[0m13:40:29.537820 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:40:29.538995 [debug] [Thread-4 (]: Marking all children of 'model.olist_ecommerce_analysis.stg_olist_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_olist_orders (models\staging\stg_olist_orders.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_orders.sql.
+[0m13:40:29.540258 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:40:29.543712 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:40:29.543712 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m13:40:29.545720 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m13:40:29.545720 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_orders' was properly closed.
+[0m13:40:29.545720 [info ] [MainThread]: 
+[0m13:40:29.545720 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.83 seconds (1.83s).
+[0m13:40:29.548610 [debug] [MainThread]: Command end result
+[0m13:40:29.595617 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:40:29.603250 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:40:29.617932 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m13:40:29.619011 [info ] [MainThread]: 
+[0m13:40:29.620170 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:40:29.621234 [info ] [MainThread]: 
+[0m13:40:29.622290 [error] [MainThread]: [31mFailure in model stg_olist_orders (models\staging\stg_olist_orders.sql)[0m
+[0m13:40:29.623347 [error] [MainThread]:   Database Error in model stg_olist_orders (models\staging\stg_olist_orders.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_orders.sql
+[0m13:40:29.624405 [info ] [MainThread]: 
+[0m13:40:29.625491 [info ] [MainThread]:   compiled code at target\compiled\olist_ecommerce_analysis\models\staging\stg_olist_orders.sql
+[0m13:40:29.626023 [info ] [MainThread]: 
+[0m13:40:29.627095 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:40:29.629237 [debug] [MainThread]: Command `dbt run` failed at 13:40:29.628709 after 9.01 seconds
+[0m13:40:29.629796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7EA0B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE6F77A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE1591890>]}
+[0m13:40:29.630908 [debug] [MainThread]: Flushing usage events
+[0m13:40:29.998514 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:42:08.960051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D9A34F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D9A375D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D9A373D0>]}
+
+
+============================== 13:42:08.960051 | 666b5d35-453e-4a3c-af1e-1279e0467721 ==============================
+[0m13:42:08.960051 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:42:08.960051 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:42:12.964434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F506B910>]}
+[0m13:42:13.034646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D6449E50>]}
+[0m13:42:13.034646 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:42:13.856317 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m13:42:14.132475 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:42:14.132475 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:42:14.148249 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m13:42:14.192994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F6B89B50>]}
+[0m13:42:14.303253 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:42:14.303253 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:42:14.346870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F6744D10>]}
+[0m13:42:14.346870 [info ] [MainThread]: Found 1 model, 5 sources, 493 macros
+[0m13:42:14.346870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F6D18790>]}
+[0m13:42:14.346870 [info ] [MainThread]: 
+[0m13:42:14.346870 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:42:14.359589 [info ] [MainThread]: 
+[0m13:42:14.359589 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:42:14.363340 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m13:42:14.364453 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:42:14.785321 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m13:42:14.785321 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:42:15.139805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F6BCCAD0>]}
+[0m13:42:15.139805 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:42:15.155495 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:42:15.155495 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_olist_orders ....................... [RUN]
+[0m13:42:15.155495 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_orders'
+[0m13:42:15.155495 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:42:15.164658 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_orders"
+[0m13:42:15.174405 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:42:15.202565 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_orders"
+[0m13:42:15.208651 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_orders: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_orders"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_olist_orders`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_orders.sql
+
+
+
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    -- These columns are already TIMESTAMP types, so just select them directly
+    order_purchase_timestamp AS order_purchased_at,
+    order_approved_at AS order_approved_at,
+    order_delivered_carrier_date AS order_delivered_carrier_at,
+    order_delivered_customer_date AS order_delivered_customer_at,
+    order_estimated_delivery_date AS order_estimated_delivery_at
+FROM
+    `portfolio-project-465909`.`olist_raw`.`orders`
+WHERE
+    order_id IS NOT NULL
+    AND order_purchase_timestamp IS NOT NULL;
+
+
+[0m13:42:15.209927 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:42:15.853619 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:42c61ab7-545f-480f-8888-359d65d1a032&page=queryresults
+[0m13:42:16.441453 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '666b5d35-453e-4a3c-af1e-1279e0467721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5F6AC3850>]}
+[0m13:42:16.441453 [info ] [Thread-1 (]: 1 of 1 OK created sql view model olist_marts.stg_olist_orders .................. [[32mCREATE VIEW (0 processed)[0m in 1.29s]
+[0m13:42:16.441453 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_orders
+[0m13:42:16.441453 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:42:16.457090 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:42:16.459099 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m13:42:16.459099 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m13:42:16.459099 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_orders' was properly closed.
+[0m13:42:16.459099 [info ] [MainThread]: 
+[0m13:42:16.461108 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.10 seconds (2.10s).
+[0m13:42:16.462687 [debug] [MainThread]: Command end result
+[0m13:42:16.505812 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:42:16.521861 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:42:16.535117 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m13:42:16.536117 [info ] [MainThread]: 
+[0m13:42:16.537115 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:42:16.538118 [info ] [MainThread]: 
+[0m13:42:16.539117 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:42:16.540116 [debug] [MainThread]: Command `dbt run` succeeded at 13:42:16.540116 after 7.68 seconds
+[0m13:42:16.541116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D9AA0690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D9AA1390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F5D303AA10>]}
+[0m13:42:16.542117 [debug] [MainThread]: Flushing usage events
+[0m13:42:16.912771 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:48:29.761092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43F34FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43F36F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43F97AD0>]}
+
+
+============================== 13:48:29.767858 | df84b901-aea9-4916-9135-e170d498b8fe ==============================
+[0m13:48:29.767858 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:48:29.767858 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_olist_order_items', 'send_anonymous_usage_stats': 'True'}
+[0m13:48:33.474009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D436FC650>]}
+[0m13:48:33.552789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D60D29E90>]}
+[0m13:48:33.552789 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:48:34.509678 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m13:48:34.764198 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:48:34.764198 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:48:34.788058 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m13:48:34.814647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D61088FD0>]}
+[0m13:48:34.915137 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:48:34.931249 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:48:34.977962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D6111CF50>]}
+[0m13:48:34.978970 [info ] [MainThread]: Found 2 models, 5 sources, 493 macros
+[0m13:48:34.979641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D60C0F750>]}
+[0m13:48:34.981647 [info ] [MainThread]: 
+[0m13:48:34.982648 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:48:34.983647 [info ] [MainThread]: 
+[0m13:48:34.983647 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:48:34.987056 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m13:48:34.988057 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:48:35.416135 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m13:48:35.421598 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:48:35.785799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D60CDC690>]}
+[0m13:48:35.785799 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:48:35.785799 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:48:35.785799 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_olist_order_items .................. [RUN]
+[0m13:48:35.785799 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_order_items'
+[0m13:48:35.785799 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:48:35.801566 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_order_items"
+[0m13:48:35.811462 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:48:35.843242 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_order_items"
+[0m13:48:35.850253 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_order_items: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_order_items"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_olist_order_items`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_order_items.sql
+
+
+
+SELECT
+    order_id,
+    order_item_id,
+    product_id,
+    seller_id,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', shipping_limit_date) AS shipping_limit_at, -- Cast to TIMESTAMP
+    price,
+    freight_value
+FROM
+    `portfolio-project-465909`.`olist_raw`.`order_items`
+WHERE
+    order_id IS NOT NULL
+    AND product_id IS NOT NULL
+    AND price IS NOT NULL;
+
+
+[0m13:48:35.851248 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:48:36.789402 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:bbec4824-06f1-46ef-943f-f86980828ee9&page=queryresults
+[0m13:48:36.994589 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:bbec4824-06f1-46ef-943f-f86980828ee9&page=queryresults
+[0m13:48:37.016554 [debug] [Thread-1 (]: Database Error in model stg_olist_order_items (models\staging\stg_olist_order_items.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_order_items.sql
+[0m13:48:37.018568 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df84b901-aea9-4916-9135-e170d498b8fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D60CD4F10>]}
+[0m13:48:37.020074 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model olist_marts.stg_olist_order_items ......... [[31mERROR[0m in 1.23s]
+[0m13:48:37.021081 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:48:37.022093 [debug] [Thread-4 (]: Marking all children of 'model.olist_ecommerce_analysis.stg_olist_order_items' to be skipped because of status 'error'.  Reason: Database Error in model stg_olist_order_items (models\staging\stg_olist_order_items.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_order_items.sql.
+[0m13:48:37.024080 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:48:37.027082 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:48:37.027082 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m13:48:37.028078 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m13:48:37.029096 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_order_items' was properly closed.
+[0m13:48:37.029096 [info ] [MainThread]: 
+[0m13:48:37.030787 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.05 seconds (2.05s).
+[0m13:48:37.031795 [debug] [MainThread]: Command end result
+[0m13:48:37.070215 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:48:37.070215 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:48:37.082398 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m13:48:37.083394 [info ] [MainThread]: 
+[0m13:48:37.084393 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:48:37.085394 [info ] [MainThread]: 
+[0m13:48:37.086392 [error] [MainThread]: [31mFailure in model stg_olist_order_items (models\staging\stg_olist_order_items.sql)[0m
+[0m13:48:37.087401 [error] [MainThread]:   Database Error in model stg_olist_order_items (models\staging\stg_olist_order_items.sql)
+  No matching signature for function PARSE_TIMESTAMP
+    Argument types: STRING, TIMESTAMP
+    Signature: PARSE_TIMESTAMP(STRING, STRING, [STRING])
+      Argument 2: Unable to coerce type TIMESTAMP to expected type STRING at [15:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_olist_order_items.sql
+[0m13:48:37.087719 [info ] [MainThread]: 
+[0m13:48:37.089727 [info ] [MainThread]:   compiled code at target\compiled\olist_ecommerce_analysis\models\staging\stg_olist_order_items.sql
+[0m13:48:37.089727 [info ] [MainThread]: 
+[0m13:48:37.091047 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:48:37.093054 [debug] [MainThread]: Command `dbt run` failed at 13:48:37.092054 after 7.42 seconds
+[0m13:48:37.093054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43CF8390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43F40CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D43FA6190>]}
+[0m13:48:37.094053 [debug] [MainThread]: Flushing usage events
+[0m13:48:37.468026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:50:06.650097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FD8C65D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FD8C74D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FD8C7850>]}
+
+
+============================== 13:50:06.666198 | 0d2e842a-7436-4ccb-84ef-5f9cb2f9edae ==============================
+[0m13:50:06.666198 [info ] [MainThread]: Running with dbt=1.10.4
+[0m13:50:06.666198 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_olist_order_items', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:50:10.227438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969A5D7890>]}
+[0m13:50:10.293348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969A6BB950>]}
+[0m13:50:10.294277 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m13:50:11.033437 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m13:50:11.265549 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:50:11.265549 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:50:11.273091 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m13:50:11.306991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FC91B550>]}
+[0m13:50:11.415815 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:50:11.415815 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:50:11.467506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969A5140D0>]}
+[0m13:50:11.468592 [info ] [MainThread]: Found 2 models, 5 sources, 493 macros
+[0m13:50:11.469665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969AA431D0>]}
+[0m13:50:11.472161 [info ] [MainThread]: 
+[0m13:50:11.473198 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:50:11.473740 [info ] [MainThread]: 
+[0m13:50:11.475308 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:50:11.477314 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m13:50:11.478375 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:50:11.899345 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m13:50:11.900345 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:50:12.293066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969AA42C90>]}
+[0m13:50:12.293066 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:50:12.300650 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:50:12.303414 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_olist_order_items .................. [RUN]
+[0m13:50:12.303414 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_order_items'
+[0m13:50:12.306426 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:50:12.324907 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_order_items"
+[0m13:50:12.335506 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:50:12.376968 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_order_items"
+[0m13:50:12.390865 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_order_items: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_order_items"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_olist_order_items`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_order_items.sql
+
+
+
+SELECT
+    order_id,
+    order_item_id,
+    product_id,
+    seller_id,
+    shipping_limit_date AS shipping_limit_at,
+    price,
+    freight_value
+FROM
+    `portfolio-project-465909`.`olist_raw`.`order_items`
+WHERE
+    order_id IS NOT NULL
+    AND product_id IS NOT NULL
+    AND price IS NOT NULL;
+
+
+[0m13:50:12.391983 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:50:12.958814 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:8c6e1ef8-4b3b-4f47-adf4-1b1e3a718acf&page=queryresults
+[0m13:50:13.511678 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d2e842a-7436-4ccb-84ef-5f9cb2f9edae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001969ABEB810>]}
+[0m13:50:13.511678 [info ] [Thread-1 (]: 1 of 1 OK created sql view model olist_marts.stg_olist_order_items ............. [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m13:50:13.511678 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_order_items
+[0m13:50:13.511678 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:50:13.527054 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:50:13.527054 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m13:50:13.527054 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m13:50:13.527054 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_order_items' was properly closed.
+[0m13:50:13.527054 [info ] [MainThread]: 
+[0m13:50:13.527054 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.05 seconds (2.05s).
+[0m13:50:13.532550 [debug] [MainThread]: Command end result
+[0m13:50:13.583924 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m13:50:13.590725 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m13:50:13.605151 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m13:50:13.606152 [info ] [MainThread]: 
+[0m13:50:13.607152 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:50:13.608152 [info ] [MainThread]: 
+[0m13:50:13.609151 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:50:13.611152 [debug] [MainThread]: Command `dbt run` succeeded at 13:50:13.611152 after 7.05 seconds
+[0m13:50:13.612152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FBFC3210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196FD677F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000196F6C93710>]}
+[0m13:50:13.613152 [debug] [MainThread]: Flushing usage events
+[0m13:50:13.985277 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:02:51.243156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB491F9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB4992650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB491FAD0>]}
+
+
+============================== 14:02:51.248393 | d5c940d3-c0c5-403f-b668-009d4a45f0d6 ==============================
+[0m14:02:51.248393 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:02:51.248393 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_olist_products', 'send_anonymous_usage_stats': 'True'}
+[0m14:02:55.922708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB45E9D50>]}
+[0m14:02:55.985764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB133B2D0>]}
+[0m14:02:55.985764 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:02:56.780991 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:02:57.005530 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:02:57.005530 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:02:57.005530 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:02:57.052380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024ED1AECBD0>]}
+[0m14:02:57.156069 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:02:57.156069 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:02:57.219142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024ED1B831D0>]}
+[0m14:02:57.220299 [info ] [MainThread]: Found 3 models, 5 sources, 493 macros
+[0m14:02:57.221459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024ED1C2BD50>]}
+[0m14:02:57.223116 [info ] [MainThread]: 
+[0m14:02:57.224203 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:02:57.224751 [info ] [MainThread]: 
+[0m14:02:57.225821 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:02:57.228585 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:02:57.229099 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:02:57.664341 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:02:57.664341 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:02:58.032956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024ED164F4D0>]}
+[0m14:02:58.032956 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:02:58.048633 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_products
+[0m14:02:58.048633 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_olist_products ..................... [RUN]
+[0m14:02:58.048633 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_products'
+[0m14:02:58.048633 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_products
+[0m14:02:58.048633 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_products"
+[0m14:02:58.064213 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_products
+[0m14:02:58.091371 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_products"
+[0m14:02:58.096319 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_products: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_products"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_olist_products`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_products.sql
+
+
+
+SELECT
+    product_id,
+    -- product_category_name is in Portuguese, will be translated in dim_products
+    product_category_name,
+    product_name_lenght,
+    product_description_lenght,
+    product_photos_qty,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm
+FROM
+    `portfolio-project-465909`.`olist_raw`.`products`
+WHERE
+    product_id IS NOT NULL
+    AND product_category_name IS NOT NULL -- Ensure we have a category;
+
+
+[0m14:02:58.097361 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:02:58.702638 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:4bdf5398-e806-43bc-8b57-4288e4a5b728&page=queryresults
+[0m14:02:59.518772 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5c940d3-c0c5-403f-b668-009d4a45f0d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB39855D0>]}
+[0m14:02:59.519773 [info ] [Thread-1 (]: 1 of 1 OK created sql view model olist_marts.stg_olist_products ................ [[32mCREATE VIEW (0 processed)[0m in 1.47s]
+[0m14:02:59.520774 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_products
+[0m14:02:59.522773 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:02:59.523773 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:02:59.523773 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:02:59.523773 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:02:59.528021 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_products' was properly closed.
+[0m14:02:59.528021 [info ] [MainThread]: 
+[0m14:02:59.528021 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.30 seconds (2.30s).
+[0m14:02:59.530497 [debug] [MainThread]: Command end result
+[0m14:02:59.569765 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:02:59.586359 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:02:59.598359 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:02:59.599360 [info ] [MainThread]: 
+[0m14:02:59.600358 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:02:59.601783 [info ] [MainThread]: 
+[0m14:02:59.602851 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:02:59.604852 [debug] [MainThread]: Command `dbt run` succeeded at 14:02:59.603852 after 8.46 seconds
+[0m14:02:59.605851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB4923090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EB46D5E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024ED16BCE50>]}
+[0m14:02:59.605851 [debug] [MainThread]: Flushing usage events
+[0m14:02:59.990026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:03:40.266273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848D992B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848D992690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848D987AD0>]}
+
+
+============================== 14:03:40.266273 | d65b7dd5-b274-49a5-a2bd-2ee3a6f6337f ==============================
+[0m14:03:40.266273 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:03:40.266273 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select stg_olist_customers', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:03:43.443510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284AA650C50>]}
+[0m14:03:43.502062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848A33B7D0>]}
+[0m14:03:43.517881 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:03:44.471778 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:03:44.724519 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:03:44.724519 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:03:44.736177 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:03:44.794233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284AAB44790>]}
+[0m14:03:44.902056 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:03:44.907057 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:03:44.938782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284AAA7B9D0>]}
+[0m14:03:44.938782 [info ] [MainThread]: Found 4 models, 5 sources, 493 macros
+[0m14:03:44.938782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284AAC24F10>]}
+[0m14:03:44.938782 [info ] [MainThread]: 
+[0m14:03:44.938782 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:03:44.954425 [info ] [MainThread]: 
+[0m14:03:44.954425 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:03:44.959094 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:03:44.960093 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:03:45.435020 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:03:45.436024 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:03:45.820951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848D12C7D0>]}
+[0m14:03:45.821956 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:03:45.826365 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_olist_customers
+[0m14:03:45.826365 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_olist_customers .................... [RUN]
+[0m14:03:45.826365 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_olist_customers'
+[0m14:03:45.826365 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_olist_customers
+[0m14:03:45.845230 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_olist_customers"
+[0m14:03:45.855749 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_olist_customers
+[0m14:03:45.891768 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_olist_customers"
+[0m14:03:45.904421 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_olist_customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_olist_customers"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_olist_customers`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_olist_customers.sql
+
+
+
+SELECT
+    customer_id,
+    customer_unique_id, -- Useful for tracking unique individuals across multiple customer_ids if they re-register
+    customer_zip_code_prefix,
+    customer_city,
+    customer_state
+FROM
+    `portfolio-project-465909`.`olist_raw`.`customers`
+WHERE
+    customer_id IS NOT NULL
+    AND customer_unique_id IS NOT NULL
+    AND customer_state IS NOT NULL -- Ensure we have basic location info;
+
+
+[0m14:03:45.905629 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:03:46.509579 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:00104710-beb7-4c6d-9626-c272c685e850&page=queryresults
+[0m14:03:47.031666 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd65b7dd5-b274-49a5-a2bd-2ee3a6f6337f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848C9893D0>]}
+[0m14:03:47.032666 [info ] [Thread-1 (]: 1 of 1 OK created sql view model olist_marts.stg_olist_customers ............... [[32mCREATE VIEW (0 processed)[0m in 1.20s]
+[0m14:03:47.033153 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_olist_customers
+[0m14:03:47.034204 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:03:47.034204 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:03:47.034204 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:03:47.034204 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:03:47.034204 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_olist_customers' was properly closed.
+[0m14:03:47.034204 [info ] [MainThread]: 
+[0m14:03:47.034204 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.08 seconds (2.08s).
+[0m14:03:47.040566 [debug] [MainThread]: Command end result
+[0m14:03:47.072655 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:03:47.083221 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:03:47.084231 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:03:47.084231 [info ] [MainThread]: 
+[0m14:03:47.084231 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:03:47.084231 [info ] [MainThread]: 
+[0m14:03:47.084231 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:03:47.084231 [debug] [MainThread]: Command `dbt run` succeeded at 14:03:47.084231 after 6.92 seconds
+[0m14:03:47.084231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002848D992810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028486C93650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028486C93510>]}
+[0m14:03:47.099716 [debug] [MainThread]: Flushing usage events
+[0m14:03:47.478060 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:43.960017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146994B6B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146994B7550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146994B4390>]}
+
+
+============================== 14:04:43.960017 | 2abe1963-a989-4cc6-b2ba-311625a3edd7 ==============================
+[0m14:04:43.960017 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:04:43.960017 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select stg_product_category_name_translation', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:47.735036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146B60DDE90>]}
+[0m14:04:47.823827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014695ECB910>]}
+[0m14:04:47.825834 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:04:48.836892 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:04:49.105397 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:04:49.106397 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:04:49.114092 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:04:49.145861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146B6608F10>]}
+[0m14:04:49.245298 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:04:49.259023 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:04:49.297620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146B61F7B10>]}
+[0m14:04:49.299627 [info ] [MainThread]: Found 5 models, 5 sources, 493 macros
+[0m14:04:49.299627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146B62B19D0>]}
+[0m14:04:49.301635 [info ] [MainThread]: 
+[0m14:04:49.303643 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:04:49.303643 [info ] [MainThread]: 
+[0m14:04:49.306189 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:04:49.308376 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:04:49.309377 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:49.725336 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:04:49.725336 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:50.057033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001469955B590>]}
+[0m14:04:50.057528 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:50.062528 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:04:50.063619 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_product_category_name_translation .. [RUN]
+[0m14:04:50.064528 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation'
+[0m14:04:50.065544 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:04:50.073290 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:04:50.077904 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:04:50.104103 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:04:50.110555 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_product_category_name_translation: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_product_category_name_translation"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_product_category_name_translation`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_product_category_name_translation.sql
+
+
+
+SELECT
+    product_category_name, -- This is the Portuguese name
+    product_category_name_english -- This is the English translation
+FROM
+    `portfolio-project-465909`.`olist_raw`.`product_category_name_translation`
+WHERE
+    product_category_name IS NOT NULL
+    AND product_category_name_english IS NOT NULL;
+
+
+[0m14:04:50.110555 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:04:50.820488 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:d2023b1d-840b-4295-8261-7d62d9dcae36&page=queryresults
+[0m14:04:51.118473 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:d2023b1d-840b-4295-8261-7d62d9dcae36&page=queryresults
+[0m14:04:51.133717 [debug] [Thread-1 (]: Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:04:51.136737 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2abe1963-a989-4cc6-b2ba-311625a3edd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146B62492D0>]}
+[0m14:04:51.137942 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model olist_marts.stg_product_category_name_translation  [[31mERROR[0m in 1.07s]
+[0m14:04:51.139312 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:04:51.140604 [debug] [Thread-4 (]: Marking all children of 'model.olist_ecommerce_analysis.stg_product_category_name_translation' to be skipped because of status 'error'.  Reason: Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql.
+[0m14:04:51.143612 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:51.145612 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:51.146612 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:04:51.147611 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:04:51.147611 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation' was properly closed.
+[0m14:04:51.148611 [info ] [MainThread]: 
+[0m14:04:51.149610 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.84 seconds (1.84s).
+[0m14:04:51.150716 [debug] [MainThread]: Command end result
+[0m14:04:51.193984 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:04:51.206767 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:04:51.214603 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:04:51.214603 [info ] [MainThread]: 
+[0m14:04:51.214603 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:04:51.214603 [info ] [MainThread]: 
+[0m14:04:51.214603 [error] [MainThread]: [31mFailure in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)[0m
+[0m14:04:51.214603 [error] [MainThread]:   Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:04:51.225898 [info ] [MainThread]: 
+[0m14:04:51.226660 [info ] [MainThread]:   compiled code at target\compiled\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:04:51.227672 [info ] [MainThread]: 
+[0m14:04:51.228670 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:04:51.229669 [debug] [MainThread]: Command `dbt run` failed at 14:04:51.229669 after 7.39 seconds
+[0m14:04:51.230667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146992784D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014699267E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000146993EDDD0>]}
+[0m14:04:51.230667 [debug] [MainThread]: Flushing usage events
+[0m14:04:51.598839 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:08:06.473616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A5C4FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A5C4790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A5C7610>]}
+
+
+============================== 14:08:06.479156 | faff34fe-a3af-4e19-ac67-9905e348ab44 ==============================
+[0m14:08:06.479156 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:08:06.483918 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_product_category_name_translation', 'send_anonymous_usage_stats': 'True'}
+[0m14:08:11.235628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B0380B10>]}
+[0m14:08:11.325759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022196FDA950>]}
+[0m14:08:11.327509 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:08:12.266289 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:08:12.524028 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:08:12.524028 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:08:12.539923 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:08:12.591805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B77E3510>]}
+[0m14:08:12.708396 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:08:12.710395 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:08:12.749731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B7715CD0>]}
+[0m14:08:12.752115 [info ] [MainThread]: Found 5 models, 5 sources, 493 macros
+[0m14:08:12.752115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B78CB810>]}
+[0m14:08:12.754429 [info ] [MainThread]: 
+[0m14:08:12.754429 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:08:12.757935 [info ] [MainThread]: 
+[0m14:08:12.757935 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:08:12.762045 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:08:12.763047 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:13.189873 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:08:13.189873 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:13.563078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B7300310>]}
+[0m14:08:13.563078 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:13.571109 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:08:13.573116 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_product_category_name_translation .. [RUN]
+[0m14:08:13.575122 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation'
+[0m14:08:13.575122 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:08:13.594507 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:08:13.604966 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:08:13.646138 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:08:13.651135 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_product_category_name_translation: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_product_category_name_translation"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_product_category_name_translation`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_product_category_name_translation.sql
+
+
+
+SELECT
+    string_field_0 AS product_category_name, -- This is the Portuguese name
+    string_field_1 AS product_category_name_english -- This is the English translation
+FROM
+    `portfolio-project-465909`.`olist_raw`.`product_category_name_translation`
+WHERE
+    product_category_name IS NOT NULL
+    AND product_category_name_english IS NOT NULL;
+
+
+[0m14:08:13.651135 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:08:14.200892 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:5e7d3157-ac42-4b47-bd2f-b19c91cb3115&page=queryresults
+[0m14:08:14.410133 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:5e7d3157-ac42-4b47-bd2f-b19c91cb3115&page=queryresults
+[0m14:08:14.434107 [debug] [Thread-1 (]: Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:08:14.436900 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'faff34fe-a3af-4e19-ac67-9905e348ab44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221B7691E50>]}
+[0m14:08:14.438801 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model olist_marts.stg_product_category_name_translation  [[31mERROR[0m in 0.86s]
+[0m14:08:14.438801 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:08:14.438801 [debug] [Thread-4 (]: Marking all children of 'model.olist_ecommerce_analysis.stg_product_category_name_translation' to be skipped because of status 'error'.  Reason: Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql.
+[0m14:08:14.444719 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:08:14.447485 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:08:14.448385 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:08:14.449450 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:08:14.450387 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation' was properly closed.
+[0m14:08:14.450387 [info ] [MainThread]: 
+[0m14:08:14.451435 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.69 seconds (1.69s).
+[0m14:08:14.452838 [debug] [MainThread]: Command end result
+[0m14:08:14.507934 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:08:14.507934 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:08:14.524597 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:08:14.535066 [info ] [MainThread]: 
+[0m14:08:14.536575 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:08:14.536575 [info ] [MainThread]: 
+[0m14:08:14.539629 [error] [MainThread]: [31mFailure in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)[0m
+[0m14:08:14.541251 [error] [MainThread]:   Database Error in model stg_product_category_name_translation (models\staging\stg_product_category_name_translation.sql)
+  Unrecognized name: product_category_name at [16:5]
+  compiled code at target\run\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:08:14.542414 [info ] [MainThread]: 
+[0m14:08:14.544900 [info ] [MainThread]:   compiled code at target\compiled\olist_ecommerce_analysis\models\staging\stg_product_category_name_translation.sql
+[0m14:08:14.545899 [info ] [MainThread]: 
+[0m14:08:14.547236 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:08:14.550555 [debug] [MainThread]: Command `dbt run` failed at 14:08:14.549542 after 8.18 seconds
+[0m14:08:14.551551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A5D0BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A6303D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002219A633F50>]}
+[0m14:08:14.552549 [debug] [MainThread]: Flushing usage events
+[0m14:08:14.921133 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:09:32.446227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250ED107890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250EDC59D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250EDF8FAD0>]}
+
+
+============================== 14:09:32.451605 | b0937ef7-cdd4-4951-b53f-96e510292652 ==============================
+[0m14:09:32.451605 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:09:32.452606 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select stg_product_category_name_translation', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:09:36.063673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250EAC21A90>]}
+[0m14:09:36.127377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250EA99BC90>]}
+[0m14:09:36.127377 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:09:36.956615 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:09:37.180340 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:09:37.180340 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:09:37.196251 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:09:37.234090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002508B139210>]}
+[0m14:09:37.338641 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:09:37.343655 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:09:37.386249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002508B1702D0>]}
+[0m14:09:37.386249 [info ] [MainThread]: Found 5 models, 5 sources, 493 macros
+[0m14:09:37.386249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002508B1701D0>]}
+[0m14:09:37.386249 [info ] [MainThread]: 
+[0m14:09:37.386249 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:09:37.386249 [info ] [MainThread]: 
+[0m14:09:37.386249 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:09:37.386249 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:09:37.386249 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:09:37.767763 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:09:37.768768 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:09:38.133120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002508B2084D0>]}
+[0m14:09:38.133120 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:09:38.143781 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:09:38.143781 [info ] [Thread-1 (]: 1 of 1 START sql view model olist_marts.stg_product_category_name_translation .. [RUN]
+[0m14:09:38.143781 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation'
+[0m14:09:38.143781 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:09:38.143781 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:09:38.160650 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:09:38.188857 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.stg_product_category_name_translation"
+[0m14:09:38.194948 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.stg_product_category_name_translation: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.stg_product_category_name_translation"} */
+
+
+  create or replace view `portfolio-project-465909`.`olist_marts`.`stg_product_category_name_translation`
+  OPTIONS()
+  as -- olist_ecommerce_analysis/models/staging/stg_product_category_name_translation.sql
+
+
+
+SELECT
+    string_field_0 AS product_category_name,        -- This is the Portuguese name
+    string_field_1 AS product_category_name_english -- This is the English translation
+FROM
+    `portfolio-project-465909`.`olist_raw`.`product_category_name_translation`
+WHERE
+    string_field_0 IS NOT NULL         -- <--- CORRECTED: Use original column name
+    AND string_field_1 IS NOT NULL -- <--- CORRECTED: Use original column name;
+
+
+[0m14:09:38.196012 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:09:38.820928 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:ab891c0b-3fba-4aa4-bae0-f6892b25263f&page=queryresults
+[0m14:09:39.615946 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b0937ef7-cdd4-4951-b53f-96e510292652', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250ECFE93D0>]}
+[0m14:09:39.615946 [info ] [Thread-1 (]: 1 of 1 OK created sql view model olist_marts.stg_product_category_name_translation  [[32mCREATE VIEW (0 processed)[0m in 1.46s]
+[0m14:09:39.615946 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.stg_product_category_name_translation
+[0m14:09:39.619371 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:09:39.619371 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:09:39.619371 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:09:39.619371 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:09:39.624046 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.stg_product_category_name_translation' was properly closed.
+[0m14:09:39.624046 [info ] [MainThread]: 
+[0m14:09:39.624046 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.24 seconds (2.24s).
+[0m14:09:39.626583 [debug] [MainThread]: Command end result
+[0m14:09:39.670922 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:09:39.676028 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:09:39.687654 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:09:39.687654 [info ] [MainThread]: 
+[0m14:09:39.687654 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:09:39.687654 [info ] [MainThread]: 
+[0m14:09:39.687654 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:09:39.687654 [debug] [MainThread]: Command `dbt run` succeeded at 14:09:39.687654 after 7.35 seconds
+[0m14:09:39.687654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250EE003D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250E7393690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250E7393510>]}
+[0m14:09:39.687654 [debug] [MainThread]: Flushing usage events
+[0m14:09:40.076858 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:16:50.275480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F45644B850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F45644AE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F456452D90>]}
+
+
+============================== 14:16:50.281476 | bc6c16b9-7c78-4aa0-b1dc-189be43fcaf5 ==============================
+[0m14:16:50.281476 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:16:50.281476 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select dim_products', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:16:53.884173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bc6c16b9-7c78-4aa0-b1dc-189be43fcaf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4730BFF50>]}
+[0m14:16:53.964025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bc6c16b9-7c78-4aa0-b1dc-189be43fcaf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F452E1C050>]}
+[0m14:16:53.964761 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:16:54.837021 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:16:55.095858 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:16:55.095858 [debug] [MainThread]: Partial parsing: updated file: olist_ecommerce_analysis://models\marts\dimensions\dim_products.sql
+[0m14:16:55.315466 [error] [MainThread]: Encountered an error:
+Compilation Error in model dim_products (models\marts\dimensions\dim_products.sql)
+  invalid syntax for function call expression
+    line 4
+      config(
+[0m14:16:55.318989 [debug] [MainThread]: Command `dbt run` failed at 14:16:55.315466 after 5.15 seconds
+[0m14:16:55.318989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4563F0F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4736EF050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F456453010>]}
+[0m14:16:55.318989 [debug] [MainThread]: Flushing usage events
+[0m14:16:55.712819 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:18:21.056935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E756450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E7B6E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E7B7AD0>]}
+
+
+============================== 14:18:21.056935 | 9969d515-1a66-472f-98c4-9c516e57b260 ==============================
+[0m14:18:21.056935 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:18:21.056935 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select dim_products', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:18:24.406074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9969d515-1a66-472f-98c4-9c516e57b260', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE1B43C2D0>]}
+[0m14:18:24.471426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9969d515-1a66-472f-98c4-9c516e57b260', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7B16B890>]}
+[0m14:18:24.471426 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:18:25.377716 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:18:25.635481 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:18:25.635481 [debug] [MainThread]: Partial parsing: updated file: olist_ecommerce_analysis://models\marts\dimensions\dim_products.sql
+[0m14:18:25.839162 [error] [MainThread]: Encountered an error:
+Compilation Error in model dim_products (models\marts\dimensions\dim_products.sql)
+  invalid syntax for function call expression
+    line 4
+      config(
+[0m14:18:25.855482 [debug] [MainThread]: Command `dbt run` failed at 14:18:25.855482 after 4.89 seconds
+[0m14:18:25.855482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E760C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E7C0D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE7E7C2250>]}
+[0m14:18:25.855482 [debug] [MainThread]: Flushing usage events
+[0m14:18:26.242791 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:20:12.384048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56F34E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56F34890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56F37850>]}
+
+
+============================== 14:20:12.385688 | cb8c5e3f-2b27-476e-b5ad-939c4766611f ==============================
+[0m14:20:12.385688 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:20:12.385688 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select dim_products', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:20:16.662311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cb8c5e3f-2b27-476e-b5ad-939c4766611f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C5673C390>]}
+[0m14:20:16.736141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cb8c5e3f-2b27-476e-b5ad-939c4766611f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C73BA1E90>]}
+[0m14:20:16.737085 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:20:17.672293 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:20:18.007258 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:20:18.009469 [debug] [MainThread]: Partial parsing: updated file: olist_ecommerce_analysis://models\marts\dimensions\dim_products.sql
+[0m14:20:18.297639 [error] [MainThread]: Encountered an error:
+Compilation Error in model dim_products (models\marts\dimensions\dim_products.sql)
+  invalid syntax for function call expression
+    line 4
+      config(
+[0m14:20:18.299533 [debug] [MainThread]: Command `dbt run` failed at 14:20:18.299533 after 6.02 seconds
+[0m14:20:18.300532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56F40D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56FA09D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C56FA3D90>]}
+[0m14:20:18.301533 [debug] [MainThread]: Flushing usage events
+[0m14:20:18.700355 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:21:45.440096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724E6D7A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724E6D74D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724E6D7F50>]}
+
+
+============================== 14:21:45.447990 | f90b381a-1816-447a-8b1f-e89f8957722c ==============================
+[0m14:21:45.447990 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:21:45.450137 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select dim_products', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:21:49.266224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B312A10>]}
+[0m14:21:49.340311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724B0EB5D0>]}
+[0m14:21:49.340311 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:21:50.329588 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:21:50.569511 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:21:50.569511 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:21:50.585236 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:21:50.627597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B828F50>]}
+[0m14:21:50.723946 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:21:50.739707 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:21:50.780338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B7A4BD0>]}
+[0m14:21:50.780338 [info ] [MainThread]: Found 6 models, 5 sources, 493 macros
+[0m14:21:50.782345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B801BD0>]}
+[0m14:21:50.784351 [info ] [MainThread]: 
+[0m14:21:50.784351 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:21:50.786360 [info ] [MainThread]: 
+[0m14:21:50.786360 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:21:50.789561 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:21:50.790555 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:51.225294 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:21:51.225294 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:51.589691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B7A5B50>]}
+[0m14:21:51.589691 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:21:51.608248 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.dim_products
+[0m14:21:51.609327 [info ] [Thread-1 (]: 1 of 1 START sql table model olist_marts.dim_products .......................... [RUN]
+[0m14:21:51.611245 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.dim_products'
+[0m14:21:51.612245 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.dim_products
+[0m14:21:51.620327 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.dim_products"
+[0m14:21:51.626540 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.dim_products
+[0m14:21:51.665441 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.dim_products"
+[0m14:21:51.670554 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.dim_products: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.dim_products"} */
+
+  
+    
+
+    create or replace table `portfolio-project-465909`.`olist_marts`.`dim_products`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- olist_ecommerce_analysis/models/marts/dimensions/dim_products.sql
+
+
+
+SELECT
+    p.product_id,
+    p.product_category_name AS product_category_name_portuguese,
+    t.product_category_name_english,
+    p.product_name_lenght,
+    p.product_description_lenght,
+    p.product_photos_qty,
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm,
+    CAST(ROUND(RAND() * (200 - 10) + 10, 2) AS NUMERIC) AS simulated_cost_of_goods_sold
+FROM
+    `portfolio-project-465909`.`olist_marts`.`stg_olist_products` p
+LEFT JOIN
+    `portfolio-project-465909`.`olist_marts`.`stg_product_category_name_translation` t
+    ON p.product_category_name = t.product_category_name
+WHERE
+    p.product_id IS NOT NULL
+    );
+  
+[0m14:21:51.671439 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:21:52.450481 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:20ac59d8-32ce-4374-8c00-9f11550670c8&page=queryresults
+[0m14:21:55.367821 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f90b381a-1816-447a-8b1f-e89f8957722c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B80E0D0>]}
+[0m14:21:55.367821 [info ] [Thread-1 (]: 1 of 1 OK created sql table model olist_marts.dim_products ..................... [[32mCREATE TABLE (32.3k rows, 3.3 MiB processed)[0m in 3.76s]
+[0m14:21:55.367821 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.dim_products
+[0m14:21:55.367821 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:21:55.383563 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:55.383563 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:21:55.383563 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:21:55.383563 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.dim_products' was properly closed.
+[0m14:21:55.383563 [info ] [MainThread]: 
+[0m14:21:55.383563 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.60 seconds (4.60s).
+[0m14:21:55.388023 [debug] [MainThread]: Command end result
+[0m14:21:55.424165 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:21:55.430337 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:21:55.441158 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:21:55.441158 [info ] [MainThread]: 
+[0m14:21:55.441158 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:21:55.441158 [info ] [MainThread]: 
+[0m14:21:55.441158 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:21:55.441158 [debug] [MainThread]: Command `dbt run` succeeded at 14:21:55.441158 after 10.10 seconds
+[0m14:21:55.441158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724E740C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002724E741990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726B8F0B50>]}
+[0m14:21:55.441158 [debug] [MainThread]: Flushing usage events
+[0m14:21:55.828610 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:26:40.383925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019295960C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192959C7E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192959C7D10>]}
+
+
+============================== 14:26:40.385933 | 57351bf3-1249-4478-ad18-9e843394b974 ==============================
+[0m14:26:40.385933 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:26:40.385933 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select dim_customers', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:26:43.912327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192B25A2A10>]}
+[0m14:26:43.976156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001929238C110>]}
+[0m14:26:43.976156 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:26:44.778795 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:26:44.992011 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:26:44.992011 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:26:45.007654 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:26:45.045684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192B2AB9250>]}
+[0m14:26:45.139049 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:26:45.145046 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:26:45.184445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192B2760F50>]}
+[0m14:26:45.186451 [info ] [MainThread]: Found 7 models, 5 sources, 493 macros
+[0m14:26:45.188460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192B26F0F10>]}
+[0m14:26:45.188460 [info ] [MainThread]: 
+[0m14:26:45.188460 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:26:45.188460 [info ] [MainThread]: 
+[0m14:26:45.193686 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:26:45.196518 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:26:45.197519 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:26:45.578178 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:26:45.578178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:26:45.952622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192928CE950>]}
+[0m14:26:45.952622 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:26:45.968523 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.dim_customers
+[0m14:26:45.968523 [info ] [Thread-1 (]: 1 of 1 START sql table model olist_marts.dim_customers ......................... [RUN]
+[0m14:26:45.968523 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.dim_customers'
+[0m14:26:45.968523 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.dim_customers
+[0m14:26:45.980824 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.dim_customers"
+[0m14:26:45.992487 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.dim_customers
+[0m14:26:46.032773 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.dim_customers"
+[0m14:26:46.044844 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.dim_customers"} */
+
+  
+    
+
+    create or replace table `portfolio-project-465909`.`olist_marts`.`dim_customers`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- olist_ecommerce_analysis/models/marts/dimensions/dim_customers.sql
+
+
+
+SELECT
+    customer_id,
+    customer_unique_id, -- A unique identifier for a customer across multiple 'customer_id's if they re-register
+    customer_zip_code_prefix,
+    customer_city,
+    customer_state
+    -- Add any derived customer attributes here if needed, e.g., customer_segment
+FROM
+    `portfolio-project-465909`.`olist_marts`.`stg_olist_customers` -- Reference the staging customer model
+WHERE
+    customer_id IS NOT NULL
+    AND customer_unique_id IS NOT NULL
+    );
+  
+[0m14:26:46.045841 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:26:46.846645 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:0f1fa72e-7d9f-4be1-b7fa-82442a7240ba&page=queryresults
+[0m14:26:49.997469 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '57351bf3-1249-4478-ad18-9e843394b974', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192B2D5D810>]}
+[0m14:26:49.997469 [info ] [Thread-1 (]: 1 of 1 OK created sql table model olist_marts.dim_customers .................... [[32mCREATE TABLE (99.4k rows, 8.8 MiB processed)[0m in 4.03s]
+[0m14:26:49.997469 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.dim_customers
+[0m14:26:49.997469 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:26:49.997469 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:26:50.013110 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:26:50.013110 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:26:50.013110 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.dim_customers' was properly closed.
+[0m14:26:50.013110 [info ] [MainThread]: 
+[0m14:26:50.013110 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.82 seconds (4.82s).
+[0m14:26:50.016003 [debug] [MainThread]: Command end result
+[0m14:26:50.042104 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:26:50.052297 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:26:50.053427 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:26:50.053427 [info ] [MainThread]: 
+[0m14:26:50.053427 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:26:50.053427 [info ] [MainThread]: 
+[0m14:26:50.053427 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:26:50.053427 [debug] [MainThread]: Command `dbt run` succeeded at 14:26:50.053427 after 9.79 seconds
+[0m14:26:50.053427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192957283D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192959D0B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019295717F50>]}
+[0m14:26:50.053427 [debug] [MainThread]: Flushing usage events
+[0m14:26:50.491334 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:10.291057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FDF8D5CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE2ED3990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE2ECFAD0>]}
+
+
+============================== 14:40:10.299494 | 374dad4c-5e43-4e55-ad88-90e4177b7e70 ==============================
+[0m14:40:10.299494 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:40:10.303525 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ulric\\.dbt', 'log_path': 'D:\\Analytics_Engineer_project\\olist_ecommerce_analysis\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select fct_daily_sales', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:40:13.910110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FFFADB3D0>]}
+[0m14:40:13.967651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FDF8EBA10>]}
+[0m14:40:13.967651 [info ] [MainThread]: Registered adapter: bigquery=1.10.0
+[0m14:40:14.767356 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:40:14.997316 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:40:14.997316 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:40:15.018183 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_ecommerce_analysis.example
+[0m14:40:15.055881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F800287D0>]}
+[0m14:40:15.153311 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:40:15.159578 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:40:15.198397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FFFFA42D0>]}
+[0m14:40:15.200405 [info ] [MainThread]: Found 8 models, 5 sources, 493 macros
+[0m14:40:15.200405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FFFAAE750>]}
+[0m14:40:15.202411 [info ] [MainThread]: 
+[0m14:40:15.202411 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:40:15.204417 [info ] [MainThread]: 
+[0m14:40:15.204417 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:40:15.206424 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909'
+[0m14:40:15.208431 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:15.684047 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_portfolio-project-465909_olist_marts'
+[0m14:40:15.684047 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:16.085672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FFFAAE750>]}
+[0m14:40:16.085672 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:40:16.085672 [debug] [Thread-1 (]: Began running node model.olist_ecommerce_analysis.fct_daily_sales
+[0m14:40:16.085672 [info ] [Thread-1 (]: 1 of 1 START sql table model olist_marts.fct_daily_sales ....................... [RUN]
+[0m14:40:16.085672 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.olist_ecommerce_analysis.fct_daily_sales'
+[0m14:40:16.085672 [debug] [Thread-1 (]: Began compiling node model.olist_ecommerce_analysis.fct_daily_sales
+[0m14:40:16.103686 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_ecommerce_analysis.fct_daily_sales"
+[0m14:40:16.116797 [debug] [Thread-1 (]: Began executing node model.olist_ecommerce_analysis.fct_daily_sales
+[0m14:40:16.158543 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_ecommerce_analysis.fct_daily_sales"
+[0m14:40:16.163545 [debug] [Thread-1 (]: On model.olist_ecommerce_analysis.fct_daily_sales: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "olist_ecommerce_analysis", "target_name": "dev", "node_id": "model.olist_ecommerce_analysis.fct_daily_sales"} */
+
+  
+    
+
+    create or replace table `portfolio-project-465909`.`olist_marts`.`fct_daily_sales`
+      
+    partition by order_date
+    cluster by product_id, customer_id
+
+    
+    OPTIONS()
+    as (
+      -- olist_ecommerce_analysis/models/marts/facts/fct_daily_sales.sql
+
+
+
+WITH order_item_details AS (
+    SELECT
+        oi.order_id,
+        oi.product_id,
+        oi.seller_id,
+        oi.price,
+        oi.freight_value,
+        -- Assume quantity of 1 per order_item_id line, or sum up if multiple quantities could exist
+        -- For Olist, typically each row is one unit, but we'll use a placeholder for quantity
+        1 AS quantity, -- Assuming each order_item_id line represents one unit
+        oi.shipping_limit_at
+    FROM
+        `portfolio-project-465909`.`olist_marts`.`stg_olist_order_items` oi
+),
+order_details AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        DATE(o.order_purchased_at) AS order_date, -- Extract date for daily aggregation
+        o.order_status,
+        o.order_approved_at,
+        o.order_delivered_customer_at
+    FROM
+        `portfolio-project-465909`.`olist_marts`.`stg_olist_orders` o
+    WHERE
+        o.order_status IN ('delivered', 'shipped') -- Focus on actual sales
+        AND o.order_purchased_at IS NOT NULL
+)
+
+SELECT
+    od.order_date,
+    od.order_id,
+    od.customer_id,
+    oid.product_id,
+    dp.product_category_name_english,
+    dp.product_category_name_portuguese,
+    oid.seller_id,
+    dc.customer_city,
+    dc.customer_state,
+    oid.quantity,
+    oid.price AS item_price,
+    oid.freight_value,
+    (oid.price + oid.freight_value) AS total_item_value,
+    -- Calculate revenue (price includes shipping from item perspective)
+    (oid.price * oid.quantity) AS item_revenue,
+    -- Calculate profit using simulated COGS from dim_products
+    (oid.price * oid.quantity) - (dp.simulated_cost_of_goods_sold * oid.quantity) AS item_profit,
+    od.order_status,
+    od.order_approved_at,
+    od.order_delivered_customer_at,
+    oid.shipping_limit_at
+FROM
+    order_details od
+JOIN
+    order_item_details oid ON od.order_id = oid.order_id
+LEFT JOIN
+    `portfolio-project-465909`.`olist_marts`.`dim_products` dp ON oid.product_id = dp.product_id
+LEFT JOIN
+    `portfolio-project-465909`.`olist_marts`.`dim_customers` dc ON od.customer_id = dc.customer_id
+WHERE
+    dp.product_id IS NOT NULL -- Ensure product details are available
+    AND dc.customer_id IS NOT NULL -- Ensure customer details are available
+    );
+  
+[0m14:40:16.164528 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:40:17.185030 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=portfolio-project-465909&j=bq:US:ccf74d35-3f2d-446d-acbb-1af606efe1f1&page=queryresults
+[0m14:40:27.744222 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '374dad4c-5e43-4e55-ad88-90e4177b7e70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F802B0450>]}
+[0m14:40:27.744222 [info ] [Thread-1 (]: 1 of 1 OK created sql table model olist_marts.fct_daily_sales .................. [[32mCREATE TABLE (109.8k rows, 30.6 MiB processed)[0m in 11.66s]
+[0m14:40:27.744222 [debug] [Thread-1 (]: Finished running node model.olist_ecommerce_analysis.fct_daily_sales
+[0m14:40:27.744222 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:40:27.750165 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:40:27.750165 [debug] [MainThread]: Connection 'list_portfolio-project-465909' was properly closed.
+[0m14:40:27.750165 [debug] [MainThread]: Connection 'list_portfolio-project-465909_olist_marts' was properly closed.
+[0m14:40:27.753414 [debug] [MainThread]: Connection 'model.olist_ecommerce_analysis.fct_daily_sales' was properly closed.
+[0m14:40:27.753414 [info ] [MainThread]: 
+[0m14:40:27.753414 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 12.55 seconds (12.55s).
+[0m14:40:27.755510 [debug] [MainThread]: Command end result
+[0m14:40:27.798259 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\manifest.json
+[0m14:40:27.805627 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\semantic_manifest.json
+[0m14:40:27.815452 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Analytics_Engineer_project\olist_ecommerce_analysis\target\run_results.json
+[0m14:40:27.816892 [info ] [MainThread]: 
+[0m14:40:27.818529 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:40:27.819632 [info ] [MainThread]: 
+[0m14:40:27.820167 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:40:27.821763 [debug] [MainThread]: Command `dbt run` succeeded at 14:40:27.821763 after 17.63 seconds
+[0m14:40:27.822820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE2F3B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE2F408D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FDC4D0850>]}
+[0m14:40:27.823336 [debug] [MainThread]: Flushing usage events
+[0m14:40:28.192205 [debug] [MainThread]: An error was encountered while trying to flush usage events
